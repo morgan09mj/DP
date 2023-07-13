@@ -114,3 +114,35 @@ input:
 50 10 1000
 Output:
 10
+
+## Calculate the length of the largest common subsequence (LCS)
+In the previous exercise series, you got acquainted with the algorithm for calculating the length of the largest common subsequence for two arrays. In this series of exercises, you need to find an algorithm based on dynamic programming that calculates the length of the largest common subsequence for three arrays.
+Entrance :
+In this question, first, three numbers n, m, k are given, which represent the number of members of the first, second, and third array, respectively, from right to left. In the next three lines, in each i-th line the members of the i-th array are mentioned - proportional to the number of its members (3 ≥ i ≥ 1).
+1 ≤ n, m, k ≤ 110
+Output:
+In the output, you should only output the length of the longest common consecutive subarray (LCS) of the three arrays.
+Example 1:
+input:
+5 5 7
+1 2 3 4 5
+5 4 3 2 1
+5 4 3 2 1 6 7
+Output:
+1
+
+## Calculate the length of the largest strictly ascending subsequence (LIS)
+In the exercise of the previous series, you got acquainted with the algorithm for calculating the length of the largest strictly ascending subsequence. Algorithm presented in the previous series of exercises is an algorithm of time order
+It is O(n²).
+As you know, this algorithm requires a lot of time (several hours) for large n in the order of 10^6. In this question, you need to provide an algorithm based on dynamic programming in the order of O(nlog(n)) time. .
+Entrance:
+n is expressed in the first line, which represents the number of array members. In the next line, the array members are separated by spaces.
+1 ≤ 𝑛 ≤ 10^6
+Output:
+In the output, only one number indicating the length of the largest strictly ascending subsequence (LIS) should be shown.
+Example 1:
+input:
+5
+2 7 4 3 8
+Output:
+3
