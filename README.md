@@ -1,6 +1,6 @@
 # DP
 Codes related to dynamic programming
-## questions :
+### questions :
 
 ## Minimum coins:
 Write a program that, according to a set of coins and the value of V, will output the minimum number of coins needed to make their sum equal to V.
@@ -48,3 +48,69 @@ output:
 Explanation:
 By paying 4 rials, Sepehr converts one of the tiles of length 3 into length 1, and by paying 1 ruble, he converts the other tile of length 3 into length 2.
 
+## H algorithm
+Hassan has recently arrived at an algorithm that, in his opinion, can reduce the execution time of the Sort Merge algorithm. But Ali, who has been with Hasan for a long time, believes that Hasan's method is wrong. So he gave Hassan an array of n numbers to sort them. The good way to sort the array is as follows:
+First, he finds the consecutive ascending parts of the array and writes the length of each one on the paper. For example, if the array is 6 4, 5, 3, 1, then the consecutive ascending parts of the array are two: 5 3, 1, and 6 4, the length of the first being 3 and the length of the second being 2. So Ali writes two numbers 3 and 2 on the paper. He writes k numbers on paper. Then it starts to sort the array in such a way that each time it selects two adjacent ascending parts of the array and merges them similar to sort Merge; It means that after this, these two ascending parts become one ascending part. In other words, he turns these two parts into one arranged part. Then he erases the two numbers related to these two parts from the paper and writes the size of the new part instead of these two numbers on the paper. Also, he has to spend time to merge two consecutive parts equal to the sum of their size (that is, the sum of the numbers he wrote on the paper for these two parts). Now Hassan wants to make the array as soon as possible in order to put Ali to sleep. sort it out and deliver it to Ali. Hassan's problem is that he is always tired. That's why he wants you to tell him what the minimum time is.
+Entrance:
+In the first line of input, there are two numbers n and k.
+Then in the next line k numbers appear, the i-th number represents the i-th number that Ali wrote on the paper.
+1 ≤ 𝑛 ≤ 10
+9
+1 ≤ 𝑘 ≤ 100
+It is guaranteed that the sum of the numbers in the second line of the input is equal to n and they are all natural numbers between 1 and n.
+Output:
+Output the shortest time to sort the array in a single output line.
+Example 1:
+input:
+10 3
+1 3 6
+output:
+14
+Explanation:
+The optimal method is to merge the first two parts together and then merge the two resulting parts into one. The cost of the first marj is 4 and the cost of the second marj is 10, which makes a total of 14.
+Example 2:
+input:
+7 4
+1 1 1 4
+Output:
+12
+Example 3:
+input:
+2 2
+1 1
+Output:
+2
+Example 4:
+input:
+4 3
+1 2 1
+Output:
+7
+
+## the cinema
+Barre Cinema has two halls, each of which shows different movies, and each has the capacity of B people.
+The bad habit of Barre people in watching movies is that every person likes to see a movie that the person in front of him in the queue sees and by default buys a ticket for the same movie unless we give him money as much as his pocket so that he is satisfied to watch another movie.
+We denote the pocket capacity of the i-th person in the queue by ai. It needs a new 𝑖 manager to manage the ticket sales of these two halls. This ticket sale should happen in such a way that:
+1- Don't sell more tickets than B for one hall.
+2- Spend the least amount of money on filling people's pockets.
+Therefore, ticket sales should be done in such a way that the lowest cost is obtained.
+It is guaranteed that we can distribute n people among the halls in such a way that no more than B people go to any of the two halls.
+Entrance:
+In the first line, n, which is the number of people in the queue, and B, which is the capacity of the halls, will be given to you. In the next line n numbers are given, the i-th number is the pocket size of the i-th person or ai.
+1 ≤ 𝑛 ≤ 3000
+1 ≤ 𝑎𝑖 ≤ 10^9
+𝑛 ≤ 2 × 𝐵
+Output:
+Print on one line the lowest cost required to meet the conditions.
+Example 1:
+input:
+2 1
+1000 50
+Output:
+50
+Example 2:
+input:
+3 2
+50 10 1000
+Output:
+10
